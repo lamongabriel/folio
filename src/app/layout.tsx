@@ -14,8 +14,8 @@ export const viewport = {
 };
 
 const RootLayout = ({ children }: {children: ReactElement}) => (
-  <html lang="en" className={`${inter.variable} ${esbuild.variable} dark`}>
-    <body>
+  <html lang="en" className={`${inter.variable} ${esbuild.variable}`}>
+    <body className="dark" style={{colorScheme: "dark"}}>
       <Heading />
       {children}
     </body>

@@ -2,6 +2,7 @@ import { cn } from "@/lib/utils";
 
 import DotPattern from "@/components/shared/magic/dot-pattern";
 import TypingAnimation from "@/components/shared/magic/typing-animation";
+import { RotatingAsset } from "@/components/shared/3d/rotating-asset";
 
 export function HomeHero() {
   return (
@@ -17,16 +18,22 @@ export function HomeHero() {
         )}
       />
 
-      <div className="container">
-        <TypingAnimation
-          className="text-left max-w-[380px] font-title text-[84px] font-semibold leading-[1.05] tracking-tight md:text-[56px] sm:text-[32px]"
-          text="Hey there, I'm Gabriel Lamon"
-        />
+      <div className="container h-full flex items-center justify-between pt-10">
+        <div className="flex-1 w-full">
+          <TypingAnimation
+            className="text-left max-w-[380px] font-title text-[84px] font-semibold leading-[1.05] tracking-tight md:text-[56px] sm:text-[32px]"
+            text="Hey there, I'm Gabriel Lamon"
+          />
 
-        <p className="mt-5 max-w-md text-[18px] leading-snug tracking-tight text-gray-200 lg:mt-4 md:mt-3.5 md:text-[16px] sm:mt-3 sm:text-[15px]">
-          Fullstack engineer with 5+ years of experience creating seamless,
-          efficient applications that solve real-world problems.
-        </p>
+          <p className="mt-5 max-w-md text-[18px] leading-snug tracking-tight text-gray-200 lg:mt-4 md:mt-3.5 md:text-[16px] sm:mt-3 sm:text-[15px]">
+            Fullstack engineer with 5+ years of experience creating seamless,
+            efficient applications that solve real-world problems.
+          </p>
+        </div>
+
+        <div className="flex-1 w-full h-[400px]">
+          <RotatingAsset />
+        </div>
       </div>
     </div>
   );
